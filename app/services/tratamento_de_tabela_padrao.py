@@ -113,6 +113,6 @@ def flatten_record(rec: dict, sep=" | "):
 
 flatten_texts = [flatten_record(r) for r in records]
 
-Path("data/output/flatten_linha_a_linha_sem_acento.txt").write_text("\n".join(flatten_texts), encoding="utf-8")
+Path("data/output/catalogo.txt").write_text("\n".join(flatten_texts), encoding="utf-8")
 
 print(f"Registros válidos: {len(records)}")
