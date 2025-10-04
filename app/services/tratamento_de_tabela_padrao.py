@@ -115,8 +115,4 @@ flatten_texts = [flatten_record(r) for r in records]
 
 Path("data/output/flatten_linha_a_linha_sem_acento.txt").write_text("\n".join(flatten_texts), encoding="utf-8")
 
-with open("flatten_linha_a_linha_sem_acento.ndjson", "w", encoding="utf-8") as f:
-    for i, r in enumerate(records):
-        f.write(json.dumps({"id": i, "flatten": flatten_record(r), "orig": r}, ensure_ascii=False) + "\n")
-
 print(f"Registros válidos: {len(records)}")
